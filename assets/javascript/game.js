@@ -1,8 +1,8 @@
 $(function () {
 
 
-    let win = 0;
-    let loss = 0;
+    // let win = 0;
+    // let loss = 0;
 
     let redCrystal = Math.floor((Math.random() * 5) + 1);
     let yellowCrystal = Math.floor((Math.random() * 10) + 5);
@@ -11,7 +11,10 @@ $(function () {
 
     let targetNumber = Math.floor((Math.random() * 100) + 50);
 
-
+    // select four crystal variables within their corresponding click function
+    // append/attatch click results to html player score
+    // create a counter
+    // add a reset to score
 
     
     console.log(targetNumber);
@@ -19,19 +22,20 @@ $(function () {
 
 
     $("#redBtn").on("click", function () {
-        
-        $("#yourScore").add  const crystals
-        let randomNumber = Math.floor(Math.random() * 10) + 1;
+        console.log(redCrystal);
+        $("#yourScore")
+        // .add  const crystals
+     
 
     });
 
     $("#yellowBtn").on("click", function () {
-
+        console.log(yellowCrystal);
 
     });
 
     $("#blueBtn").on("click", function () {
-
+        console.log(blueCrystal);
 
        
 
@@ -39,7 +43,7 @@ $(function () {
 
     $("#greenBtn").on("click", function () {
 
-
+        console.log(greenCrystal);
         
 
     });
