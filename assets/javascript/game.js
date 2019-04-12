@@ -23,7 +23,8 @@ $(function () {
 
     $("#redBtn").on("click", function () {
         console.log(redCrystal);
-        $("#yourScore")
+        $("#yourScore").html()
+
         // .add  const crystals
      
 
@@ -31,20 +32,19 @@ $(function () {
 
     $("#yellowBtn").on("click", function () {
         console.log(yellowCrystal);
-
+        $("#yourScore").html()
     });
 
     $("#blueBtn").on("click", function () {
         console.log(blueCrystal);
-
+        $("#yourScore").html()
        
 
     });
 
     $("#greenBtn").on("click", function () {
-
         console.log(greenCrystal);
-        
+        $("#yourScore").html()
 
     });
 
