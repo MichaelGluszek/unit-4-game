@@ -1,8 +1,10 @@
 $(function () {
 
 
-    // let win = 0;
-    // let loss = 0;
+    let win = 0;
+    let loss = 0;
+
+    let totalScore = 0;
 
     let redCrystal = Math.floor((Math.random() * 5) + 1);
     let yellowCrystal = Math.floor((Math.random() * 10) + 5);
@@ -10,55 +12,88 @@ $(function () {
     let greenCrystal = Math.floor((Math.random() * 20) + 15);
 
     let targetNumber = Math.floor((Math.random() * 100) + 50);
-
-    // select four crystal variables within their corresponding click function
-    // append/attatch click results to html player score
-    // create a counter
-    // add a reset to score
-
-    
-    console.log(targetNumber);
     $("#targetNumber").html(targetNumber);
-
+    
 
     $("#redBtn").on("click", function () {
         console.log(redCrystal);
-        $("#yourScore").html()
+        totalScore += redCrystal;
+        $("#yourScore").html(totalScore)
 
-        // .add  const crystals
-     
+        if (totalScore === targetNumber) {
+            win++;
+            console.log("win")
+            $("#wins").html(win);
+            $("roundStatus").html("You Win!")
+
+        } else if (totalScore > targetNumber) {
+            loss++
+            console.log("loss")
+            $("#losses").html("Try again.");
+        }
 
     });
 
     $("#yellowBtn").on("click", function () {
         console.log(yellowCrystal);
-        $("#yourScore").html()
+        totalScore += yellowCrystal;
+        $("#yourScore").html(totalScore)
+
+
+        if (totalScore === targetNumber) {
+            win++;
+            console.log("win")
+            $("#wins").html(win);
+            $("roundStatus").html("You Win!")
+
+        } else if (totalScore > targetNumber) {
+            loss++
+            console.log("loss")
+            $("#losses").html("Try again.");
+        }
+
     });
 
     $("#blueBtn").on("click", function () {
         console.log(blueCrystal);
-        $("#yourScore").html()
-       
+        totalScore += blueCrystal;
+        $("#yourScore").html(totalScore)
 
+        if (totalScore === targetNumber) {
+            win++;
+            console.log("win")
+            $("#wins").html(win);
+            $("roundStatus").html("You Win!")
+
+        } else if (totalScore > targetNumber) {
+            loss++
+            console.log("loss")
+            $("#losses").html("Try again.");
+        }
     });
 
     $("#greenBtn").on("click", function () {
         console.log(greenCrystal);
-        $("#yourScore").html()
+        totalScore += greenCrystal;
+        $("#yourScore").html(totalScore)
 
+        if (totalScore === targetNumber) {
+            win++;
+            console.log("win")
+            $("#wins").html(win);
+            $("roundStatus").html("You Win!")
+
+        } else if (totalScore > targetNumber) {
+            loss++
+            console.log("loss")
+            $("#losses").html("Try again.");
+        }
     });
 
 
-    if (yourScore === targetNumber) {
-        win++;
 
-        $("#wins").html(win);
-        $("roundStatus").html("You Win!")
 
-    } else if (yourScore > targetNumber) {
-        loss++
-        $("#losses").html("Try again.");
-    }
+
 
 
 
