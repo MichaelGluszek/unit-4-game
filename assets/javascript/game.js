@@ -1,5 +1,3 @@
-$(function () {
-
 
     let win = 0;
     let loss = 0;
@@ -12,14 +10,16 @@ $(function () {
     let greenCrystal = Math.floor((Math.random() * 20) + 15);
 
     let targetNumber = Math.floor((Math.random() * 100) + 50);
-    $("#targetNumber").html(targetNumber);
-    
+    $(".targetNumber").html(targetNumber);
+
 
     $("#redBtn").on("click", function () {
-        console.log(redCrystal);
+       
+        // console.log(redCrystal);
         totalScore += redCrystal;
         $("#yourScore").html(totalScore)
-
+        console.log(totalScore);
+        console.log(targetNumber);
         if (totalScore === targetNumber) {
             win++;
             console.log("win")
@@ -30,6 +30,7 @@ $(function () {
             loss++
             console.log("loss")
             $("#losses").html("Try again.");
+            reset();
         }
 
     });
@@ -50,6 +51,7 @@ $(function () {
             loss++
             console.log("loss")
             $("#losses").html("Try again.");
+            reset();
         }
 
     });
@@ -69,6 +71,7 @@ $(function () {
             loss++
             console.log("loss")
             $("#losses").html("Try again.");
+            reset();
         }
     });
 
@@ -87,17 +90,19 @@ $(function () {
             loss++
             console.log("loss")
             $("#losses").html("Try again.");
+            reset();
         }
     });
 
+function reset(){
+    totalScore = 0;
 
+    redCrystal = Math.floor((Math.random() * 5) + 1);
+    yellowCrystal = Math.floor((Math.random() * 10) + 5);
+    blueCrystal = Math.floor((Math.random() * 15) + 10);
+    greenCrystal = Math.floor((Math.random() * 20) + 15);
 
+    targetNumber = Math.floor((Math.random() * 100) + 50);
+    $(".targetNumber").html(targetNumber);
 
-
-
-
-
-
-});
-
-
+}
