@@ -27,11 +27,17 @@ body {
 .targetNumber {
     background-image: url('../images/mix.jpg');
     font-family: fantasy;
+    font-size: 40px;
     margin: 5px 5px 5px 5px;
     padding-left: 75px;
     padding-top: 55px;
     padding-bottom: 50px;
 }
+
+#yourScore {
+    font-size: 40px;
+}
+
 .scoreBoard {
     background-color: turquoise;
     margin: 10px 30px 0px 20px;

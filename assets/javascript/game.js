@@ -24,12 +24,13 @@
             win++;
             console.log("win")
             $("#wins").html(win);
-            $("roundStatus").html("You Win!")
+            $(".roundStatus").html("You Win!")
 
         } else if (totalScore > targetNumber) {
             loss++
             console.log("loss")
-            $("#losses").html("Try again.");
+            $("#losses").html(loss);
+            $(".roundStatus").html("Try again!")
             reset();
         }
 
@@ -45,12 +46,13 @@
             win++;
             console.log("win")
             $("#wins").html(win);
-            $("roundStatus").html("You Win!")
+            $(".roundStatus").html("You Win!")
 
         } else if (totalScore > targetNumber) {
             loss++
             console.log("loss")
-            $("#losses").html("Try again.");
+            $("#losses").html(loss);
+            $(".roundStatus").html("Try again!")
             reset();
         }
 
@@ -65,12 +67,13 @@
             win++;
             console.log("win")
             $("#wins").html(win);
-            $("roundStatus").html("You Win!")
+            $(".roundStatus").html("You Win!")
 
         } else if (totalScore > targetNumber) {
             loss++
             console.log("loss")
-            $("#losses").html("Try again.");
+            $("#losses").html(loss);
+            $(".roundStatus").html("Try again!")
             reset();
         }
     });
@@ -84,12 +87,13 @@
             win++;
             console.log("win")
             $("#wins").html(win);
-            $("roundStatus").html("You Win!")
+            $(".roundStatus").html("You Win!")
 
         } else if (totalScore > targetNumber) {
             loss++
             console.log("loss")
-            $("#losses").html("Try again.");
+            $("#losses").html(loss);
+            $(".roundStatus").html("Try again!")
             reset();
         }
     });
